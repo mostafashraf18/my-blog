@@ -1,0 +1,85 @@
+<%- include('partials/header') %>
+
+<main class="page">
+  <div class="container">
+    <p class="section-label">About</p>
+    <h1 class="section-title">A bit about me.</h1>
+
+    <div class="about-grid">
+      <div>
+        <div class="about__bio">
+          <p>
+            I'm a software engineer with a passion for building reliable, scalable systems. I enjoy working across the stack but I'm most at home in backend and infrastructure work — the kind of problems where correctness actually matters.
+          </p>
+          <p>
+            Right now I'm focused on cloud-native development on AWS, building APIs, and automating everything I can automate. When I'm not coding, I'm probably writing about something I just figured out.
+          </p>
+          <p>
+            This site is a place to share that thinking, document my projects, and hopefully help other engineers avoid the mistakes I've made.
+          </p>
+        </div>
+
+        <div class="skills-block">
+          <h3>Skills & Tools</h3>
+
+          <div class="skill-group">
+            <div class="skill-group__label">Languages</div>
+            <div class="skill-group__items">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group__label">Infrastructure</div>
+            <div class="skill-group__items">
+              <span class="tag">AWS EC2</span>
+              <span class="tag">S3</span>
+              <span class="tag">RDS</span>
+              <span class="tag">Nginx</span>
+              <span class="tag">Docker</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group__label">Tools</div>
+            <div class="skill-group__items">
+              <span class="tag">Git</span>
+              <span class="tag">Linux</span>
+              <span class="tag">PM2</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__sidebar">
+        <div class="about__avatar">[ your photo ]</div>
+        <div class="about__meta">
+          <div class="about__meta-item">
+            📍 Location
+            <span>Cairo, Egypt</span>
+          </div>
+          <div class="about__meta-item">
+            💼 Role
+            <span>Software Engineer (DevOps Cloud Engineer)</span>
+          </div>
+          <div class="about__meta-item">
+            ☁️ Cloud
+            <span>AWS Technologies</span>
+          </div>
+          <div class="about__meta-item mt-16">
+            <a href="https://github.com/mostafashraf18" class="btn btn--ghost" style="width:100%;justify-content:center;">GitHub →</a>
+          </div>
+          <div class="about__meta-item">
+            <a href="/resume" class="btn btn--ghost" style="width:100%;justify-content:center;">Resume →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

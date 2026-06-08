@@ -1,0 +1,60 @@
+<%- include('partials/header') %>
+
+<main class="page">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <h1 class="section-title">Get in touch.</h1>
+
+    <div class="contact-grid">
+      <div>
+        <% if (success) { %>
+          <div class="alert alert--success"><%= success %></div>
+        <% } %>
+        <% if (error) { %>
+          <div class="alert alert--error"><%= error %></div>
+        <% } %>
+
+        <form method="POST" action="/contact">
+          <div class="form-group">
+            <label class="form-label" for="name">Mostafa Ashraf *</label>
+            <input class="form-input" type="text" id="name" name="name" required placeholder="Mostafa Ashraf">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">ma2963629@gmail.com</label>
+            <input class="form-input" type="email" id="email" name="email" required placeholder="ma2963629@gmail.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="subject">Subject</label>
+            <input class="form-input" type="text" id="subject" name="subject" placeholder="What's this about?">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message *</label>
+            <textarea class="form-textarea" id="message" name="message" required placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Send Message →</button>
+        </form>
+      </div>
+
+      <div style="padding-top:8px;">
+        <p style="margin-bottom:32px;">I'm always open to interesting conversations, collaboration, or just saying hello.</p>
+
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div>
+            <div class="section-label">Email</div>
+            <a href="mailto:your@email.com" style="color:var(--text);font-size:0.95rem;">your@email.com</a>
+          </div>
+          <div>
+            <div class="section-label">GitHub</div>
+            <a href="https://github.com/yourusername" target="_blank" style="color:var(--text);font-size:0.95rem;">github.com/yourusername</a>
+          </div>
+          <div>
+            <div class="section-label">LinkedIn</div>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" style="color:var(--text);font-size:0.95rem;">linkedin.com/in/yourusername</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

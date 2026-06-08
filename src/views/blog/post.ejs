@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+
+<main class="page">
+  <div class="container">
+    <a href="/blog" class="btn btn--ghost" style="margin-bottom:40px;display:inline-flex;">← Back to Blog</a>
+
+    <article>
+      <header class="post-header">
+        <div class="post-header__date">
+          <%= new Date(post.meta.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) %>
+        </div>
+        <h1><%= post.meta.title %></h1>
+        <% if (post.meta.tags.length) { %>
+          <div class="post-header__tags">
+            <% post.meta.tags.forEach(tag => { %>
+              <span class="tag"><%= tag %></span>
+            <% }) %>
+          </div>
+        <% } %>
+      </header>
+
+      <div class="post-content">
+        <%- post.html %>
+      </div>
+    </article>
+
+    <div class="divider"></div>
+    <a href="/blog" class="btn btn--ghost">← All Posts</a>
+  </div>
+</main>
+
+<%- include('../partials/footer') %>

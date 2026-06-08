@@ -1,0 +1,39 @@
+<%- include('../partials/header') %>
+
+<main class="page">
+  <div class="container">
+    <p class="section-label">Writing</p>
+    <h1 class="section-title">Blog.</h1>
+
+    <% if (posts.length === 0) { %>
+      <p class="text-muted text-mono" style="font-size:0.9rem;">No posts yet. Check back soon.</p>
+    <% } else { %>
+      <div class="post-list">
+        <% posts.forEach(post => { %>
+        <a href="/blog/<%= post.slug %>" style="display:contents;">
+          <article class="post-card">
+            <span class="post-card__date">
+              <%= new Date(post.meta.date).toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' }) %>
+            </span>
+            <div>
+              <div class="post-card__title"><%= post.meta.title %></div>
+              <% if (post.meta.excerpt) { %>
+                <div class="post-card__excerpt"><%= post.meta.excerpt %></div>
+              <% } %>
+              <% if (post.meta.tags.length) { %>
+                <div class="post-card__tags">
+                  <% post.meta.tags.forEach(tag => { %>
+                    <span class="tag"><%= tag %></span>
+                  <% }) %>
+                </div>
+              <% } %>
+            </div>
+          </article>
+        </a>
+        <% }) %>
+      </div>
+    <% } %>
+  </div>
+</main>
+
+<%- include('../partials/footer') %>

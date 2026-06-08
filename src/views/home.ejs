@@ -1,0 +1,57 @@
+<%- include('partials/header') %>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero__eyebrow">Software Engineer</div>
+    <h1 class="hero__title">
+      Hi, I'm <span class="accent">Mostafa Ashraf</span><br>
+      <span class="dim">I build things, That's it.</span>
+    </h1>
+    <p class="hero__sub">
+      I'm a software engineer focused on backend systems, cloud infrastructure, and developer tooling. I write about things I learn and ship along the way.
+    </p>
+    <div class="hero__actions">
+      <a href="/projects" class="btn btn--primary">View Projects →</a>
+      <a href="/blog" class="btn btn--ghost">Read the Blog</a>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="divider"></div>
+
+  <% if (recentPosts.length > 0) { %>
+  <section>
+    <p class="section-label">Latest Writing</p>
+    <div class="post-list">
+      <% recentPosts.forEach(post => { %>
+      <a href="/blog/<%= post.slug %>" style="display:contents;">
+        <article class="post-card">
+          <span class="post-card__date">
+            <%= new Date(post.meta.date).toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' }) %>
+          </span>
+          <div>
+            <div class="post-card__title"><%= post.meta.title %></div>
+            <% if (post.meta.excerpt) { %>
+              <div class="post-card__excerpt"><%= post.meta.excerpt %></div>
+            <% } %>
+            <% if (post.meta.tags.length) { %>
+              <div class="post-card__tags">
+                <% post.meta.tags.forEach(tag => { %>
+                  <span class="tag"><%= tag %></span>
+                <% }) %>
+              </div>
+            <% } %>
+          </div>
+        </article>
+      </a>
+      <% }) %>
+    </div>
+    <div class="mt-32">
+      <a href="/blog" class="btn btn--ghost">All posts →</a>
+    </div>
+  </section>
+  <% } %>
+</div>
+
+<%- include('partials/footer') %>

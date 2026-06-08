@@ -1,0 +1,80 @@
+<%- include('partials/header') %>
+
+<main class="page">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px;margin-bottom:48px;">
+      <div>
+        <p class="section-label">Resume</p>
+        <h1>Mostafa Ashraf</h1>
+        <p class="mt-8" style="font-family:var(--font-mono);font-size:0.85rem;color:var(--text-muted);">Software Engineer · Cairo, Egypt</p>
+      </div>
+      <a href="/resume/download" class="btn btn--primary">Download PDF ↓</a>
+    </div>
+
+    <div class="resume-section">
+      <h2>Experience</h2>
+      <div class="resume-entry">
+        <div class="resume-entry__header">
+          <span class="resume-entry__title">Software Engineer</span>
+          <span class="resume-entry__date">2022 — Present</span>
+        </div>
+        <div class="resume-entry__company">Company Name</div>
+        <div class="resume-entry__desc">
+          Built and maintained backend services handling X requests/day. Led migration to AWS EC2 with Nginx and PM2, reducing downtime by Y%. Designed RESTful APIs consumed by mobile and web clients.
+        </div>
+      </div>
+      <div class="resume-entry">
+        <div class="resume-entry__header">
+          <span class="resume-entry__title">Junior Developer</span>
+          <span class="resume-entry__date">2020 — 2022</span>
+        </div>
+        <div class="resume-entry__company">Previous Company</div>
+        <div class="resume-entry__desc">
+          Developed features for a Node.js/Express application. Worked with PostgreSQL and wrote unit tests.
+        </div>
+      </div>
+    </div>
+
+    <div class="resume-section">
+      <h2>Education</h2>
+      <div class="resume-entry">
+        <div class="resume-entry__header">
+          <span class="resume-entry__title">B.Sc. Computer Science</span>
+          <span class="resume-entry__date">2016 — 2020</span>
+        </div>
+        <div class="resume-entry__company">Your University</div>
+      </div>
+    </div>
+
+    <div class="resume-section">
+      <h2>Certifications</h2>
+      <div class="resume-entry">
+        <div class="resume-entry__header">
+          <span class="resume-entry__title">AWS Certified Developer – Associate</span>
+          <span class="resume-entry__date">In Progress</span>
+        </div>
+        <div class="resume-entry__company">Amazon Web Services</div>
+      </div>
+    </div>
+
+    <div class="resume-section">
+      <h2>Skills</h2>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;padding-top:8px;">
+        <span class="tag">Node.js</span>
+        <span class="tag">Express</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Python</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">AWS EC2</span>
+        <span class="tag">S3</span>
+        <span class="tag">Nginx</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Git</span>
+        <span class="tag">Linux</span>
+        <span class="tag">REST APIs</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>
